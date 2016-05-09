@@ -1,0 +1,45 @@
+---
+parserOptions:
+  ecmaVersion: 6
+extends: node-style-guide
+env:
+  node: true
+  es6: true
+rules:
+  # error suppression for node-style-guide
+  space-after-keywords: off
+  keyword-spacing:
+    - error
+    - before: true
+      after: true
+  # es2015 rules for node 4.x
+  arrow-body-style:
+    - error
+    - always
+  arrow-parens:
+    - error
+    - always
+  arrow-spacing:
+    - error
+    - before: true
+      after: true
+  generator-star-spacing:
+    - error
+    - before: true
+      after: false
+  no-class-assign: error
+  no-const-assign: error
+  no-dupe-class-members: error
+  no-new-symbol: error
+  no-this-before-super: error
+  no-useless-computed-key: error
+  no-useless-constructor: error
+  no-var: error
+  object-shorthand:
+    - warn
+    - always
+  prefer-arrow-callback: error
+  prefer-template: error
+  template-curly-spacing:
+    - error
+    - always
