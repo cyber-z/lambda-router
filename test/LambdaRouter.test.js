@@ -27,6 +27,10 @@ describe('Router testing', () => {
     assert(_.isUndefined(noRoutesRouter.getRoute('echo:handler')));
   });
 
+  it('resolve modules on current working directory (not in baseDir)', () => {
+    assert(_.isFunction(router.getRoute('index:call')));
+  });
+
   it('getRoute with collect routeName', () => {
     assert(_.isFunction(router.getRoute('echo:handler')));
   });

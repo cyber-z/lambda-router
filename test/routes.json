@@ -2,5 +2,9 @@
   {
     "module": "echo",
     "action": "handler"
+  },
+  {
+    "module": "index",
+    "action": "call"
   }
 ]
