@@ -55,6 +55,39 @@ describe('Router testing', () => {
     assert(_.isFunction(router.getRoute('echo:hello')));
   });
 
+  it('setRoute by handler', () => {
+    router.setRoute({
+      name: 'directRoute',
+      handler: (event, context) => {
+        return context.done(null, true);
+      }
+    });
+    assert(_.isFunction(router.getRoute('directRoute')));
+  });
+
+  it('setRoute by handler without name', () => {
+    try {
+      router.setRoute({
+        handler: (event, context) => {
+          return context.done(null, true);
+        }
+      });
+    } catch (e) {
+      assert.ok(true);
+      return ;
+    }
+    assert.fail('expects occurring Error but never thrown');
+  });
+
+  it('setRoute by handler with name', () => {
+    router.setRoute('directRoute', {
+      handler: (event, context) => {
+        return context.done(null, true);
+      }
+    });
+    assert(_.isFunction(router.getRoute('directRoute')));
+  });
+
   it('setRoute after changing baseDir', () => {
     router.baseDir = '';
     try {
@@ -63,7 +96,7 @@ describe('Router testing', () => {
         action: 'hello'
       });
     } catch (e) {
-      assert(true);
+      assert.ok(true);
       return ;
     }
     assert.fail('expects occurring Error but never thrown');
