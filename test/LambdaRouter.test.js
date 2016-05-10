@@ -23,7 +23,7 @@ describe('Router testing', () => {
     const noRoutesRouter = new Router({
       baseDir: 'sample'
     });
-    assert(noRoutesRouter.routes.length === 0);
+    assert(Object.keys(noRoutesRouter.routes).length === 0);
     assert(_.isUndefined(noRoutesRouter.getRoute('echo:handler')));
   });
 
