@@ -27,6 +27,20 @@ describe('Router testing', () => {
     assert(_.isUndefined(noRoutesRouter.getRoute('echo:handler')));
   });
 
+  it('construct with eventResolver', (done) => {
+    const routes = JSON.parse(fs.readFileSync('./test/routes.json'));
+    const eventRouter = new Router({
+      baseDir: 'sample',
+      routes,
+      eventResolver: (event) => {
+        return event.handler;
+      }
+    });
+    eventRouter.routes.resolveEvent({handler: 'echo:handler'}, {
+      done
+    });
+  });
+
   it('resolve modules on current working directory (not in baseDir)', () => {
     assert(_.isFunction(router.getRoute('index:call')));
   });
