@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint . --ignore-path .gitignore",
-    "cover": "istanbul cover _mocha"
+    "cover": "istanbul cover _mocha && codecov"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/cyber-z/lambda-router#readme",
   "devDependencies": {
+    "codecov": "^1.0.1",
     "eslint": "^2.9.0",
     "eslint-config-node-style-guide": "^3.0.0",
     "istanbul": "^0.4.3",

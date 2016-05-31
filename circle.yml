@@ -1,5 +1,10 @@
 machine:
   node:
-    version: 6.2.0
+    version: 4.3.0
   environment:
     NODE_ENV: ci
+test:
+  override:
+    - npm run cover
+  post:
+    - bash <(curl -s https://codecov.io/bash)
