@@ -1,12 +1,13 @@
 {
   "name": "lambda-router",
   "version": "0.0.1",
-  "description": "A routing flamework for AWS Lambda",
+  "description": "A routing framework for AWS Lambda",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "lint": "eslint . --ignore-path .gitignore",
-    "cover": "istanbul cover _mocha && codecov"
+    "cover": "istanbul cover _mocha && codecov",
+    "docs": "documentation readme -s 'API Docs' -g lib/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/cyber-z/lambda-router#readme",
   "devDependencies": {
     "codecov": "^1.0.1",
+    "documentation": "^4.0.0-beta4",
     "eslint": "^2.9.0",
     "eslint-config-node-style-guide": "^3.0.0",
     "istanbul": "^0.4.3",
