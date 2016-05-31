@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yu0819ki/lambda-router.git"
+    "url": "git+https://github.com/cyber-z/lambda-router.git"
   },
   "keywords": [
     "aws",
@@ -20,9 +20,9 @@
   "author": "yu0819ki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yu0819ki/lambda-router/issues"
+    "url": "https://github.com/cyber-z/lambda-router/issues"
   },
-  "homepage": "https://github.com/yu0819ki/lambda-router#readme",
+  "homepage": "https://github.com/cyber-z/lambda-router#readme",
   "devDependencies": {
     "eslint": "^2.9.0",
     "eslint-config-node-style-guide": "^3.0.0",
