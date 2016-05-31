@@ -102,6 +102,19 @@ describe('Router testing', () => {
     assert(_.isFunction(router.getRoute('directRoute')));
   });
 
+  it('setRoute by invalid handler', () => {
+    try {
+      router.setRoute('directRoute', {
+        handler: 'not a function',
+      });
+    } catch (e) {
+      assert.ok(true);
+      return ;
+    }
+    assert.fail('expects occurring Error but never thrown');
+  });
+
+
   it('setRoute after changing baseDir', () => {
     router.baseDir = '';
     try {
